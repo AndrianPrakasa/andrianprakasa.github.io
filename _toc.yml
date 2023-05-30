@@ -4,6 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: tugas1
-- file: tugas2
-- file: Tugas UTS
+- file: Tugas/UTS Penambangan Data
+- file: Tugas/Decision Tree Data Iris
+- file: Tugas/Menghitung_Jarak
