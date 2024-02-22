@@ -1,1 +1,47 @@
-<meta http-equiv="Refresh" content="0; url=intro.html" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Numbers and Paragraphs</title>
+<script>
+  // Function to generate a random number between min and max
+  function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // Function to generate random numbers and paragraphs
+  function generateRandomNumbersAndParagraphs() {
+    // Get a random number between 1 and 10 for the total number of <p> tags
+    var totalParagraphs = getRandomNumber(10, 100);
+
+    // Get the container where paragraphs will be added
+    var container = document.getElementById('container');
+
+    // Clear any existing content
+    container.innerHTML = '';
+
+    // Loop to create <p> tags and add random numbers
+    for (var i = 0; i < totalParagraphs; i++) {
+      // Generate a random number between 1 and 100
+      var randomNumber = getRandomNumber(1, 100);
+
+      // Create a new paragraph element
+      var paragraph = document.createElement('p');
+
+      // Set the text content of the paragraph to the random number
+      paragraph.textContent = "Random Number: " + randomNumber;
+
+      // Append the paragraph to the container
+      container.appendChild(paragraph);
+    }
+  }
+</script>
+</head>
+<body>
+  <button onclick="generateRandomNumbersAndParagraphs()">Generate Random Numbers and Paragraphs</button>
+  <div id="container">
+    <!-- Paragraphs will be added here -->
+  </div>
+</body>
+</html>
